@@ -8,10 +8,11 @@
 		"name": "GlobalArt, Inc",
 		"email": "admin@globalart.dev"
 	},
-	"publisher": "GlobalArt, Inc",
+	"publisher": "globalart",
 	"license": "MIT",
 	"main": "./dist/extension",
 	"scripts": {
+		"compile": "webpack --mode production",
 		"build": "npm run lint && webpack --mode production",
 		"lint": "prettier --check . && eslint src --ext mjs,js,ts",
 		"format": "prettier --write . && eslint src --ext mjs,js,ts --fix"
@@ -180,6 +181,7 @@
 		"bufferutil": "^4.0.6",
 		"dayjs": "^1.11.3",
 		"discord-rpc": "^4.0.1",
+		"electron": "^25.2.0",
 		"lodash-es": "^4.17.21",
 		"tslib": "^2.4.0",
 		"utf-8-validate": "^5.0.9"
@@ -194,6 +196,7 @@
 		"eslint": "^8.17.0",
 		"eslint-config-marine": "^9.4.1",
 		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-import": "^2.27.5",
 		"prettier": "^2.6.2",
 		"terser-webpack-plugin": "^5.3.3",
 		"ts-loader": "^9.3.0",

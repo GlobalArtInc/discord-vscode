@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access */
 
 const { Client } = require('discord-rpc'); // eslint-disable-line
-import { commands, ExtensionContext, StatusBarAlignment, StatusBarItem, window, workspace, debug } from 'vscode';
 import throttle from 'lodash-es/throttle';
+import { commands, ExtensionContext, StatusBarAlignment, StatusBarItem, window, workspace, debug } from 'vscode';
 
 import { activity } from './activity';
 import { CLIENT_ID, CONFIG_KEYS } from './constants';
@@ -36,7 +36,7 @@ async function sendActivity() {
 async function login() {
 	log(LogLevel.Info, 'Creating discord-rpc client');
 	rpc = new Client({ transport: 'ipc' });
-
+	
 	rpc.on('ready', () => {
 		log(LogLevel.Info, 'Successfully connected to Discord');
 		cleanUp();

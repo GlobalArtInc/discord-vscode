@@ -153,7 +153,7 @@ async function details(idling: CONFIG_KEYS, editing: CONFIG_KEYS, debugging: CON
 			.replace(REPLACE_KEYS.LanguageUpperCase, toUpper(fileIcon));
 	}
 
-	return raw;
+	return raw.substring(0, 128);
 }
 
 export async function activity(previous: ActivityPayload = {}) {
@@ -184,7 +184,8 @@ export async function activity(previous: ActivityPayload = {}) {
 		smallImageKey: defaultSmallImageKey,
 		smallImageText: defaultSmallImageText,
 	};
-
+	
+	
 	if (swapBigAndSmallImage) {
 		state = {
 			...state,
