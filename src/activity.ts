@@ -195,10 +195,10 @@ export async function activity(previous: ActivityPayload = {}) {
 			smallImageText: defaultLargeImageText,
 		};
 	}
-
+	
 	if (!removeRemoteRepository && git?.repositories.length) {
 		let repo = git.repositories.find((repo) => repo.ui.selected)?.state.remotes[0]?.fetchUrl;
-
+		
 		if (repo) {
 			if (repo.startsWith('git@') || repo.startsWith('ssh://')) {
 				repo = repo.replace('ssh://', '').replace(':', '/').replace('git@', 'https://').replace('.git', '');
