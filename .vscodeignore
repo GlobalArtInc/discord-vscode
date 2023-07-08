@@ -1,0 +1,27 @@
+# Packages
+node_modules
+**/node_modules
+
+# Build artifacts
+dist/**/*.map
+
+# Log files
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Miscellaneous
+.tmp/
+.github/
+.vscode/
+src/
+.gitattributes
+.gitignore
+tsconfig.json
+webpack.config.js
+package-lock.json
