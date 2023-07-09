@@ -1,7 +1,7 @@
 {
 	"name": "discord-vscode-rpc",
-	"displayName": "Discord RPC connect",
-	"version": "1.0.5",
+	"displayName": "Discord Rich Presence Connect",
+	"version": "1.0.6",
 	"description": "Update your discord status with a rich presence.",
 	"private": true,
 	"author": {
