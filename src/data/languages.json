@@ -397,6 +397,8 @@
 		".hql": { "image": "sql" },
 		".viw": { "image": "sql" },
 		".prc": { "image": "sql" },
+		"/commitizen\\.(js|ts)/i": { "image": "commitizen", "isRegular": true },
+		"/commitlint\\.(.*?)\\.(ts|js)/i": { "image": "commitlint", "isRegular": true },
 		".cql": { "image": "sql" },
 		".db2": { "image": "sql" },
 		"/\\.(styl|stylus)$/i": { "image": "stylus" },
