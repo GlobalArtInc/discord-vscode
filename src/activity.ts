@@ -13,6 +13,7 @@ import {
 	UNKNOWN_GIT_REPO_NAME,
 	VSCODE_IMAGE_KEY,
 	VSCODE_INSIDERS_IMAGE_KEY,
+	VSCODE_KUBERNETES_IMAGE_KEY,
 } from './constants';
 import { log, LogLevel } from './logger';
 import { getConfig, getGit, resolveFileIcon, toLower, toTitle, toUpper } from './util';
@@ -161,11 +162,16 @@ export async function activity(previous: ActivityPayload = {}) {
 	const swapBigAndSmallImage = config[CONFIG_KEYS.SwapBigAndSmallImage];
 
 	const appName = env.appName;
-	const defaultSmallImageKey = debug.activeDebugSession
+	const remoteName = env.remoteName;
+	const isK8s = remoteName === 'k8s-container';
+	const defaultSmallImageKey = isK8s
+		? VSCODE_KUBERNETES_IMAGE_KEY
+		: debug.activeDebugSession
 		? DEBUG_IMAGE_KEY
 		: appName.includes('Insiders')
 		? VSCODE_INSIDERS_IMAGE_KEY
 		: VSCODE_IMAGE_KEY;
+
 	const defaultSmallImageText = config[CONFIG_KEYS.SmallImage].replace(REPLACE_KEYS.AppName, appName);
 	const defaultLargeImageText = config[CONFIG_KEYS.LargeImageIdling];
 	const removeDetails = config[CONFIG_KEYS.RemoveDetails];
@@ -184,8 +190,7 @@ export async function activity(previous: ActivityPayload = {}) {
 		smallImageKey: defaultSmallImageKey,
 		smallImageText: defaultSmallImageText,
 	};
-	
-	
+
 	if (swapBigAndSmallImage) {
 		state = {
 			...state,
@@ -195,10 +200,10 @@ export async function activity(previous: ActivityPayload = {}) {
 			smallImageText: defaultLargeImageText,
 		};
 	}
-	
+
 	if (!removeRemoteRepository && git?.repositories.length) {
 		let repo = git.repositories.find((repo) => repo.ui.selected)?.state.remotes[0]?.fetchUrl;
-		
+
 		if (repo) {
 			if (repo.startsWith('git@') || repo.startsWith('ssh://')) {
 				repo = repo.replace('ssh://', '').replace(':', '/').replace('git@', 'https://').replace('.git', '');

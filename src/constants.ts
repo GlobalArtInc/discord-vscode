@@ -2,7 +2,7 @@ import LANG from './data/languages.json';
 
 export const CLIENT_ID = '1127365366977396867' as const;
 
-export const KNOWN_EXTENSIONS: { [key: string]: { image: string, isRegular?: boolean } } = LANG.KNOWN_EXTENSIONS;
+export const KNOWN_EXTENSIONS: { [key: string]: { image: string; isRegular?: boolean } } = LANG.KNOWN_EXTENSIONS;
 export const KNOWN_LANGUAGES: { language: string; image: string }[] = LANG.KNOWN_LANGUAGES;
 
 export const EMPTY = '' as const;
@@ -13,6 +13,7 @@ export const IDLE_IMAGE_KEY = 'vscode-big' as const;
 export const DEBUG_IMAGE_KEY = 'debug' as const;
 export const VSCODE_IMAGE_KEY = 'vscode' as const;
 export const VSCODE_INSIDERS_IMAGE_KEY = 'vscode-insiders' as const;
+export const VSCODE_KUBERNETES_IMAGE_KEY = 'kubernetes-dark' as const;
 
 export const UNKNOWN_GIT_BRANCH = 'Unknown' as const;
 export const UNKNOWN_GIT_REPO_NAME = 'Unknown' as const;
