@@ -67,7 +67,6 @@ export function resolveFileIcon(document: TextDocument): string {
     return regex.test(filename);
   });
   const findKnownLanguage = KNOWN_LANGUAGES.find((key) => key.language === document.languageId);
-  console.log(filename, '!!!!!')
   const fileIcon = findKnownExtension
     ? KNOWN_EXTENSIONS[findKnownExtension]
     : findKnownLanguage
