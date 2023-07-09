@@ -2,7 +2,7 @@ import LANG from './data/languages.json';
 
 export const CLIENT_ID = '1127365366977396867' as const;
 
-export const KNOWN_EXTENSIONS: { [key: string]: { image: string } } = LANG.KNOWN_EXTENSIONS;
+export const KNOWN_EXTENSIONS: { [key: string]: { image: string, isRegular?: boolean } } = LANG.KNOWN_EXTENSIONS;
 export const KNOWN_LANGUAGES: { language: string; image: string }[] = LANG.KNOWN_LANGUAGES;
 
 export const EMPTY = '' as const;

@@ -444,6 +444,7 @@
 		".wast": { "image": "wasm" },
 		".wasm": { "image": "wasm" },
 		"/webpack(\\.dev|\\.development|\\.prod|\\.production)?\\.config(\\.babel)?\\.(js|jsx|coffee|ts|json|json5|yaml|yml)/i": {
+			"isRegular": true,
 			"image": "webpack"
 		},
 		".xml": { "image": "xml" },

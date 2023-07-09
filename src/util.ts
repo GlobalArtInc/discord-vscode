@@ -41,11 +41,23 @@ export const toTitle = (str: string): string => str.toLowerCase().replace(/^\w/,
 
 export function resolveFileIcon(document: TextDocument): string {
   const filename = basename(document.fileName);
-  const findKnownExtension = Object.keys(KNOWN_EXTENSIONS).find((key) => {
+  const findKnownExtension = Object.keys(KNOWN_EXTENSIONS)
+  .sort((a, b) => {
+    const aIsRegular = KNOWN_EXTENSIONS[a].isRegular || false;
+    const bIsRegular = KNOWN_EXTENSIONS[b].isRegular || false;
+
+    if (aIsRegular && !bIsRegular) {
+      return -1;
+    } else if (!aIsRegular && bIsRegular) {
+      return 1;
+    }
+
+    return 0;
+  })
+  .find((key) => {
     if (filename.endsWith(key)) {
       return true;
     }
-
     const match = /^\/(.*)\/([mgiy]+)$/.exec(key);
     if (!match) {
       return false;
@@ -55,6 +67,7 @@ export function resolveFileIcon(document: TextDocument): string {
     return regex.test(filename);
   });
   const findKnownLanguage = KNOWN_LANGUAGES.find((key) => key.language === document.languageId);
+  console.log(filename, '!!!!!')
   const fileIcon = findKnownExtension
     ? KNOWN_EXTENSIONS[findKnownExtension]
     : findKnownLanguage
