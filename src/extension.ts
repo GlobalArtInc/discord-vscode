@@ -28,7 +28,7 @@ async function sendActivity() {
 	state = {
 		...(await activity(state)),
 	};
-	rpc.setActivity(state);
+	return rpc.setActivity(state);
 }
 
 async function login() {
@@ -53,9 +53,9 @@ async function login() {
 
 	rpc.on('disconnected', () => {
 		cleanUp();
-		rpc.destroy();
 		statusBarIcon.text = '$(pulse) Reconnect to Discord';
 		statusBarIcon.command = 'discord.reconnect';
+		void rpc.destroy();
 	});
 
 	try {
@@ -63,7 +63,6 @@ async function login() {
 	} catch (error: any) {
 		log(LogLevel.Error, `Encountered the following error while trying to login:\n${error as string}`);
 		cleanUp();
-		rpc.destroy();
 		if (!config[CONFIG_KEYS.SuppressNotifications]) {
 			if (error?.message?.includes('ENOENT')) {
 				void window.showErrorMessage('No Discord client detected');
@@ -73,6 +72,7 @@ async function login() {
 		}
 		statusBarIcon.text = '$(pulse) Reconnect to Discord';
 		statusBarIcon.command = 'discord.reconnect';
+		return rpc.destroy();
 	}
 }
 
@@ -112,7 +112,7 @@ export async function activate(context: ExtensionContext) {
 		}
 		log(LogLevel.Info, 'Disable: Cleaning up old listeners');
 		cleanUp();
-		rpc.destroy();
+		void rpc.destroy();
 		log(LogLevel.Info, 'Disable: Destroyed the rpc instance');
 		statusBarIcon.hide();
 	};

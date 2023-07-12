@@ -43,8 +43,8 @@ export function resolveFileIcon(document: TextDocument): string {
 	const filename = basename(document.fileName);
 	const findKnownExtension = Object.keys(KNOWN_EXTENSIONS)
 		.sort((a, b) => {
-			const aIsRegular = KNOWN_EXTENSIONS[a].isRegular || false;
-			const bIsRegular = KNOWN_EXTENSIONS[b].isRegular || false;
+			const aIsRegular = KNOWN_EXTENSIONS[a].isRegular ?? false;
+			const bIsRegular = KNOWN_EXTENSIONS[b].isRegular ?? false;
 
 			if (aIsRegular && !bIsRegular) {
 				return -1;
