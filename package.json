@@ -12,6 +12,7 @@
 	"license": "MIT",
 	"main": "./dist/extension",
 	"scripts": {
+		"start": "webpack --mode production --config ./webpack.config.js --watch",
 		"compile": "webpack --mode production",
 		"build": "npm run lint && webpack --mode production",
 		"lint": "prettier --check . && eslint src --ext mjs,js,ts",
