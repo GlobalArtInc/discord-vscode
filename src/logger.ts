@@ -28,7 +28,7 @@ export function log(level: LogLevel, message: string | Error | object) {
 			const json = JSON.stringify(message, null, 2);
 			send(level, json);
 		} catch (error) {
-			console.error(`Failed to stringify log message: ${error}`);
+			// console.error(`Failed to stringify log message: ${error}`);
 		}
 	}
 }

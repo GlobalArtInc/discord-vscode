@@ -16,5 +16,9 @@
 		"**/*.spec.js",
 		"**/*.spec.mjs"
 	],
+	"rules": {
+		"@typescript-eslint/prefer-nullish-coalescing": "off",
+		"@typescript-eslint/explicit-member-accessibility": "off"
+	},
 	"exclude": []
 }
