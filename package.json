@@ -199,7 +199,7 @@
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-import": "^2.27.5",
 		"prettier": "^3.5.3",
-		"terser-webpack-plugin": "^5.3.3",
+		"terser-webpack-plugin": "^5.3.14",
 		"ts-loader": "^9.5.2",
 		"tsup": "^6.1.0",
 		"typescript": "^5.8.3",
