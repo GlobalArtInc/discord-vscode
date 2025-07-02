@@ -15,7 +15,8 @@
 		"compile": "webpack --mode production",
 		"build": "pnpm run lint && webpack --mode production",
 		"lint": "prettier --check . && eslint src --ext mjs,js,ts",
-		"format": "prettier --write . && eslint src --ext mjs,js,ts --fix"
+		"format": "prettier --write . && eslint src --ext mjs,js,ts --fix",
+		"package": "pnpm run build && vsce package --no-dependencies --allow-star-activation"
 	},
 	"activationEvents": [
 		"*"
@@ -214,6 +215,7 @@
 		"@types/vscode": "^1.101.0",
 		"@typescript-eslint/eslint-plugin": "^8.35.1",
 		"@typescript-eslint/parser": "^8.35.1",
+		"@vscode/vsce": "^3.6.0",
 		"clean-webpack-plugin": "^4.0.0",
 		"eslint": "^9.30.1",
 		"eslint-config-marine": "^9.4.1",
@@ -228,6 +230,6 @@
 		"webpack-cli": "^6.0.1"
 	},
 	"engines": {
-		"vscode": "^1.63.1"
+		"vscode": "^1.101.0"
 	}
 }

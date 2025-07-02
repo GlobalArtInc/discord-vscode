@@ -18,10 +18,22 @@ pids
 # Miscellaneous
 .tmp/
 .github/
-.vscode/
-src/
+.vscode/**
+.vscode-test/**
+src/**
 .gitattributes
 .gitignore
-tsconfig.json
+.yarnrc
+vsc-extension-quickstart.md
+**/tsconfig.json
+**/.eslintrc.json
+**/*.map
+**/*.ts
+*.vsix
+.eslintrc.js
+.prettierrc
+pnpm-lock.yaml
 webpack.config.js
-package-lock.json
+tsconfig.json
+.eslintrc.cjs
+**/*-debug-*.log
