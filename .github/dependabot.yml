@@ -1,8 +1,8 @@
 version: 2
 updates:
   - package-ecosystem: npm
-    directory: "/"
-    rebase-strategy: "auto"
+    directory: '/'
+    rebase-strategy: 'auto'
     schedule:
       interval: daily
     open-pull-requests-limit: 99

@@ -13,7 +13,7 @@
 	"main": "./dist/extension",
 	"scripts": {
 		"compile": "webpack --mode production",
-		"build": "npm run lint && webpack --mode production",
+		"build": "pnpm run lint && webpack --mode production",
 		"lint": "prettier --check . && eslint src --ext mjs,js,ts",
 		"format": "prettier --write . && eslint src --ext mjs,js,ts --fix"
 	},
@@ -187,6 +187,7 @@
 		"utf-8-validate": "^5.0.9"
 	},
 	"devDependencies": {
+		"@eslint/eslintrc": "^3.3.1",
 		"@types/discord-rpc": "^4.0.9",
 		"@types/lodash-es": "^4.17.6",
 		"@types/node": "^24.0.10",

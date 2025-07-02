@@ -167,10 +167,10 @@ export async function activity(previous: ActivityPayload = {}) {
 	const defaultSmallImageKey = isK8s
 		? VSCODE_KUBERNETES_IMAGE_KEY
 		: debug.activeDebugSession
-		? DEBUG_IMAGE_KEY
-		: appName.includes('Insiders')
-		? VSCODE_INSIDERS_IMAGE_KEY
-		: VSCODE_IMAGE_KEY;
+			? DEBUG_IMAGE_KEY
+			: appName.includes('Insiders')
+				? VSCODE_INSIDERS_IMAGE_KEY
+				: VSCODE_IMAGE_KEY;
 
 	const defaultSmallImageText = config[CONFIG_KEYS.SmallImage].replace(REPLACE_KEYS.AppName, appName);
 	const defaultLargeImageText = config[CONFIG_KEYS.LargeImageIdling];
@@ -184,7 +184,7 @@ export async function activity(previous: ActivityPayload = {}) {
 		details: removeDetails
 			? undefined
 			: await details(CONFIG_KEYS.DetailsIdling, CONFIG_KEYS.DetailsEditing, CONFIG_KEYS.DetailsDebugging),
-		startTimestamp: config[CONFIG_KEYS.RemoveTimestamp] ? undefined : previous.startTimestamp ?? Date.now(),
+		startTimestamp: config[CONFIG_KEYS.RemoveTimestamp] ? undefined : (previous.startTimestamp ?? Date.now()),
 		largeImageKey: IDLE_IMAGE_KEY,
 		largeImageText: defaultLargeImageText,
 		smallImageKey: defaultSmallImageKey,
@@ -237,7 +237,7 @@ export async function activity(previous: ActivityPayload = {}) {
 						CONFIG_KEYS.LowerDetailsIdling,
 						CONFIG_KEYS.LowerDetailsEditing,
 						CONFIG_KEYS.LowerDetailsDebugging,
-				  ),
+					),
 		};
 
 		if (swapBigAndSmallImage) {

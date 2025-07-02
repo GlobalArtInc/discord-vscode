@@ -70,10 +70,10 @@ export function resolveFileIcon(document: TextDocument): string {
 	const fileIcon = findKnownExtension
 		? KNOWN_EXTENSIONS[findKnownExtension]
 		: findKnownLanguage
-		? findKnownLanguage.image
-		: null;
+			? findKnownLanguage.image
+			: null;
 
-	return typeof fileIcon === 'string' ? fileIcon : fileIcon?.image ?? 'text';
+	return typeof fileIcon === 'string' ? fileIcon : (fileIcon?.image ?? 'text');
 }
 
 export async function getGit(): Promise<API | null | undefined> {
