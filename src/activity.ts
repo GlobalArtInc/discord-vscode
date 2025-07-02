@@ -15,6 +15,7 @@ import {
 	VSCODE_INSIDERS_IMAGE_KEY,
 	VSCODE_KUBERNETES_IMAGE_KEY,
 } from './constants';
+import { instanceManager } from './instanceManager';
 import { log, LogLevel } from './logger';
 import { getConfig, getGit, resolveFileIcon, toLower, toTitle, toUpper } from './util';
 
@@ -129,6 +130,14 @@ async function details(idling: CONFIG_KEYS, editing: CONFIG_KEYS, debugging: CON
 			raw = config[debugging] as string;
 		} else {
 			raw = config[editing] as string;
+		}
+
+		if (instanceManager.isMultiInstanceModeEnabled()) {
+			const instanceInfo = instanceManager.getInstanceInfo();
+			const instanceSuffix = ` [Instance: ${instanceInfo.workspaceName}]`;
+			if (raw.length + instanceSuffix.length <= 128) {
+				raw += instanceSuffix;
+			}
 		}
 
 		if (workspaceFolder) {

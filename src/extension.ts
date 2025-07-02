@@ -1,14 +1,16 @@
 import { Client } from 'discord-rpc';
 import throttle from 'lodash-es/throttle';
-import { commands, ExtensionContext, StatusBarAlignment, StatusBarItem, window, workspace, debug } from 'vscode';
+import { commands, debug, ExtensionContext, StatusBarAlignment, StatusBarItem, window, workspace } from 'vscode';
 
 import { activity } from './activity';
 import { CLIENT_ID, CONFIG_KEYS } from './constants';
+import { instanceManager } from './instanceManager';
 import { log, LogLevel } from './logger';
 import { getConfig, getGit } from './util';
 
 const statusBarIcon: StatusBarItem = window.createStatusBarItem(StatusBarAlignment.Left);
 statusBarIcon.text = '$(pulse) Connecting to Discord...';
+statusBarIcon.command = 'discord.selectActiveInstance';
 
 let rpc: Client = new Client({ transport: 'ipc' });
 const config = getConfig();
@@ -23,6 +25,10 @@ export function cleanUp() {
 }
 
 async function sendActivity() {
+	if (!(await instanceManager.isActiveInstance())) {
+		return;
+	}
+
 	state = {
 		...(await activity(state)),
 	};
@@ -33,14 +39,22 @@ async function login() {
 	log(LogLevel.Info, 'Creating discord-rpc client');
 	rpc = new Client({ transport: 'ipc' });
 
-	rpc.on('ready', () => {
+	rpc.on('ready', async () => {
 		log(LogLevel.Info, 'Successfully connected to Discord');
 		cleanUp();
 
-		statusBarIcon.text = '$(globe) Connected to Discord';
-		statusBarIcon.tooltip = 'Connected to Discord';
+		const isActive = await instanceManager.isActiveInstance();
+		const instanceId = instanceManager.getInstanceId();
 
-		void sendActivity();
+		if (isActive) {
+			statusBarIcon.text = '$(globe) Connected to Discord (Active)';
+			statusBarIcon.tooltip = `Connected to Discord - Active Instance (${instanceId})`;
+			void sendActivity();
+		} else {
+			statusBarIcon.text = '$(globe) Connected to Discord (Inactive)';
+			statusBarIcon.tooltip = `Connected to Discord - Inactive Instance (${instanceId})`;
+		}
+
 		const onChangeActiveTextEditor = window.onDidChangeActiveTextEditor(() => sendActivity());
 		const onChangeTextDocument = workspace.onDidChangeTextDocument(throttle(() => sendActivity(), 2000));
 		const onStartDebugSession = debug.onDidStartDebugSession(() => sendActivity());
@@ -138,7 +152,18 @@ export async function activate(context: ExtensionContext) {
 		statusBarIcon.show();
 	});
 
-	context.subscriptions.push(enabler, disabler, reconnecter, disconnect);
+	const setAsActiveInstance = commands.registerCommand('discord.setAsActiveInstance', async () => {
+		await instanceManager.setAsActiveInstance();
+		await disable(false);
+		await enable(false);
+		void window.showInformationMessage('This VS Code instance is now active for Discord Presence');
+	});
+
+	const selectActiveInstance = commands.registerCommand('discord.selectActiveInstance', async () => {
+		await instanceManager.showInstanceSelector();
+	});
+
+	context.subscriptions.push(enabler, disabler, reconnecter, disconnect, setAsActiveInstance, selectActiveInstance);
 
 	if (!isWorkspaceExcluded && config[CONFIG_KEYS.Enabled]) {
 		statusBarIcon.show();
@@ -162,10 +187,32 @@ export async function activate(context: ExtensionContext) {
 		}
 	});
 
+	workspace.onDidChangeConfiguration(async (event) => {
+		if (
+			event.affectsConfiguration('discord.multiInstanceMode') ||
+			event.affectsConfiguration('discord.activeInstanceId')
+		) {
+			const isActive = await instanceManager.isActiveInstance();
+			const instanceId = instanceManager.getInstanceId();
+
+			if (rpc && statusBarIcon.text.includes('Connected')) {
+				if (isActive) {
+					statusBarIcon.text = '$(globe) Connected to Discord (Active)';
+					statusBarIcon.tooltip = `Connected to Discord - Active Instance (${instanceId})`;
+					void sendActivity();
+				} else {
+					statusBarIcon.text = '$(globe) Connected to Discord (Inactive)';
+					statusBarIcon.tooltip = `Connected to Discord - Inactive Instance (${instanceId})`;
+				}
+			}
+		}
+	});
+
 	await getGit();
 }
 
 export function deactivate() {
 	cleanUp();
 	rpc.destroy();
+	void instanceManager.clearActiveInstance();
 }

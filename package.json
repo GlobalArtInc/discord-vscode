@@ -1,12 +1,12 @@
 {
 	"name": "discord-vscode-rpc",
 	"displayName": "Discord Rich Presence Connect",
-	"version": "1.0.7",
+	"version": "1.1.0",
 	"description": "Update your discord status with a rich presence.",
 	"private": true,
 	"author": {
 		"name": "GlobalArt, Inc",
-		"email": "admin@globalart.dev"
+		"email": "tech@globalart.dev"
 	},
 	"publisher": "globalart",
 	"license": "MIT",
@@ -43,6 +43,16 @@
 			{
 				"command": "discord.disconnect",
 				"title": "Disconnect Discord Presence from Discord",
+				"category": "Discord Presence"
+			},
+			{
+				"command": "discord.setAsActiveInstance",
+				"title": "Set this VS Code instance as active for Discord Presence",
+				"category": "Discord Presence"
+			},
+			{
+				"command": "discord.selectActiveInstance",
+				"title": "Select which VS Code instance should send Discord Presence",
 				"category": "Discord Presence"
 			}
 		],
@@ -148,6 +158,16 @@
 						"type": "number",
 						"default": 0,
 						"description": "Time (in seconds) to clear the presence when idling. 0 (the default) means no clearing"
+					},
+					"discord.multiInstanceMode": {
+						"type": "boolean",
+						"default": false,
+						"description": "Enable multi-instance mode to control which VS Code window sends Discord Presence data"
+					},
+					"discord.activeInstanceId": {
+						"type": "string",
+						"default": "",
+						"description": "ID of the active VS Code instance for Discord Presence (automatically managed)"
 					}
 				}
 			}

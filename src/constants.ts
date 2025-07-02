@@ -59,4 +59,6 @@ export const enum CONFIG_KEYS {
 	RemoveTimestamp = 'removeTimestamp',
 	RemoveRemoteRepository = 'removeRemoteRepository',
 	IdleTimeout = 'idleTimeout',
+	MultiInstanceMode = 'multiInstanceMode',
+	ActiveInstanceId = 'activeInstanceId',
 }
