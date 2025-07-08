@@ -214,7 +214,7 @@
 		"@types/node": "^24.0.10",
 		"@types/vscode": "^1.96.0",
 		"@typescript-eslint/eslint-plugin": "^8.35.1",
-		"@typescript-eslint/parser": "^8.35.1",
+		"@typescript-eslint/parser": "^8.36.0",
 		"@vscode/vsce": "^3.6.0",
 		"clean-webpack-plugin": "^4.0.0",
 		"eslint": "^9.30.1",
