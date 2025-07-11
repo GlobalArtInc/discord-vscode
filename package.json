@@ -212,7 +212,7 @@
 		"@types/discord-rpc": "^4.0.9",
 		"@types/lodash-es": "^4.17.6",
 		"@types/node": "^24.0.13",
-		"@types/vscode": "^1.96.0",
+		"@types/vscode": "^1.102.0",
 		"@typescript-eslint/eslint-plugin": "^8.36.0",
 		"@typescript-eslint/parser": "^8.36.0",
 		"@vscode/vsce": "^3.6.0",
