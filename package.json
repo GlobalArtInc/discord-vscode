@@ -211,7 +211,7 @@
 		"@eslint/eslintrc": "^3.3.1",
 		"@types/discord-rpc": "^4.0.9",
 		"@types/lodash-es": "^4.17.6",
-		"@types/node": "^24.7.0",
+		"@types/node": "^24.7.2",
 		"@types/vscode": "^1.105.0",
 		"@typescript-eslint/eslint-plugin": "^8.46.0",
 		"@typescript-eslint/parser": "^8.46.0",
