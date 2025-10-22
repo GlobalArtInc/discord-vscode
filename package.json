@@ -213,7 +213,7 @@
 		"@types/lodash-es": "^4.17.6",
 		"@types/node": "^24.9.1",
 		"@types/vscode": "^1.105.0",
-		"@typescript-eslint/eslint-plugin": "^8.46.1",
+		"@typescript-eslint/eslint-plugin": "^8.46.2",
 		"@typescript-eslint/parser": "^8.46.2",
 		"@vscode/vsce": "^3.6.2",
 		"clean-webpack-plugin": "^4.0.0",
