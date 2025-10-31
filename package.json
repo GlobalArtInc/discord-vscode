@@ -200,7 +200,7 @@
 	},
 	"dependencies": {
 		"bufferutil": "^4.0.9",
-		"dayjs": "^1.11.18",
+		"dayjs": "^1.11.19",
 		"discord-rpc": "^4.0.1",
 		"electron": "^39.0.0",
 		"lodash-es": "^4.17.21",
