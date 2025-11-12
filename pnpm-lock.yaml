@@ -34,8 +34,8 @@ importers:
         specifier: ^3.3.1
         version: 3.3.1
       '@types/discord-rpc':
-        specifier: ^4.0.9
-        version: 4.0.9
+        specifier: ^4.0.10
+        version: 4.0.10
       '@types/lodash-es':
         specifier: ^4.17.6
         version: 4.17.12
@@ -585,8 +585,8 @@ packages:
   '@types/cacheable-request@6.0.3':
     resolution: {integrity: sha512-IQ3EbTzGxIigb1I3qPZc1rWJnH0BmSKv5QYTalEwweFvyBDLSAe24zP0le/hyi7ecGfZVlIVAg4BZqb8WBwKqw==}
 
-  '@types/discord-rpc@4.0.9':
-    resolution: {integrity: sha512-IW5yPfEzcZRaHTvB/AZOvadMwQihVzxbl6xueuGUr3RBF8VSkzbucCRC/zzS10CEVka7LRGT4C7lXKMbWv8oWQ==}
+  '@types/discord-rpc@4.0.10':
+    resolution: {integrity: sha512-V7uQUUjYHwQ+8LyTcPZvExOi8yv310XZgZxzsVljTXhmik4apgRuDj+oqz15n0On0qXunEuvDdhD7VZyQgXm6g==}
 
   '@types/eslint-scope@3.7.7':
     resolution: {integrity: sha512-MzMFlSLBqNF2gcHWO0G1vP/YQyfvrxZ0bF+u7mzUdZ1/xK4A4sru+nraZz5i3iEIk1l1uyicaDVTB4QbbEkAYg==}
@@ -3649,7 +3649,7 @@ snapshots:
       '@types/node': 24.10.0
       '@types/responselike': 1.0.3
 
-  '@types/discord-rpc@4.0.9':
+  '@types/discord-rpc@4.0.10':
     dependencies:
       '@types/events': 3.0.3
 
