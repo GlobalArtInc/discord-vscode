@@ -202,7 +202,7 @@
 		"bufferutil": "^4.0.9",
 		"dayjs": "^1.11.19",
 		"discord-rpc": "^4.0.1",
-		"electron": "^39.2.0",
+		"electron": "^39.2.2",
 		"lodash-es": "^4.17.21",
 		"tslib": "^2.4.0",
 		"utf-8-validate": "^5.0.9"
