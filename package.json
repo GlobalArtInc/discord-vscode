@@ -208,7 +208,7 @@
 		"utf-8-validate": "^5.0.9"
 	},
 	"devDependencies": {
-		"@eslint/eslintrc": "^3.3.1",
+		"@eslint/eslintrc": "^3.3.3",
 		"@types/discord-rpc": "^4.0.10",
 		"@types/lodash-es": "^4.17.6",
 		"@types/node": "^24.10.1",
