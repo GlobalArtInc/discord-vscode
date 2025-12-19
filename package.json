@@ -199,7 +199,7 @@
 		"theme": "dark"
 	},
 	"dependencies": {
-		"bufferutil": "^4.0.9",
+		"bufferutil": "^4.1.0",
 		"dayjs": "^1.11.19",
 		"discord-rpc": "^4.0.1",
 		"electron": "^39.2.7",
