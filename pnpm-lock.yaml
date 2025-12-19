@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       bufferutil:
-        specifier: ^4.0.9
-        version: 4.0.9
+        specifier: ^4.1.0
+        version: 4.1.0
       dayjs:
         specifier: ^1.11.19
         version: 1.11.19
       discord-rpc:
         specifier: ^4.0.1
-        version: 4.0.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+        version: 4.0.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       electron:
         specifier: ^39.2.7
         version: 39.2.7
@@ -1029,8 +1029,8 @@ packages:
   buffer@5.7.1:
     resolution: {integrity: sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==}
 
-  bufferutil@4.0.9:
-    resolution: {integrity: sha512-WDtdLmJvAuNNPzByAYpRo2rF1Mmradw6gvWsQKf63476DDXmomT9zUiGypLcG4ibIM67vhAj8jJRdbmEws2Aqw==}
+  bufferutil@4.1.0:
+    resolution: {integrity: sha512-ZMANVnAixE6AWWnPzlW2KpUrxhm9woycYvPOo67jWHyFowASTEd9s+QN1EIMsSDtwhIxN4sWE1jotpuDUIgyIw==}
     engines: {node: '>=6.14.2'}
 
   bundle-name@4.1.0:
@@ -4142,7 +4142,7 @@ snapshots:
       ieee754: 1.2.1
     optional: true
 
-  bufferutil@4.0.9:
+  bufferutil@4.1.0:
     dependencies:
       node-gyp-build: 4.8.4
 
@@ -4364,10 +4364,10 @@ snapshots:
   detect-node@2.1.0:
     optional: true
 
-  discord-rpc@4.0.1(bufferutil@4.0.9)(utf-8-validate@5.0.10):
+  discord-rpc@4.0.1(bufferutil@4.1.0)(utf-8-validate@5.0.10):
     dependencies:
       node-fetch: 2.7.0
-      ws: 7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      ws: 7.5.10(bufferutil@4.1.0)(utf-8-validate@5.0.10)
     optionalDependencies:
       register-scheme: https://codeload.github.com/devsnek/node-register-scheme/tar.gz/e7cc9a63a1f512565da44cb57316d9fb10750e17
     transitivePeerDependencies:
@@ -6495,9 +6495,9 @@ snapshots:
 
   wrappy@1.0.2: {}
 
-  ws@7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10):
+  ws@7.5.10(bufferutil@4.1.0)(utf-8-validate@5.0.10):
     optionalDependencies:
-      bufferutil: 4.0.9
+      bufferutil: 4.1.0
       utf-8-validate: 5.0.10
 
   wsl-utils@0.1.0:
