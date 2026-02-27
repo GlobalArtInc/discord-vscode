@@ -40,8 +40,8 @@ importers:
         specifier: ^4.17.6
         version: 4.17.12
       '@types/node':
-        specifier: ^25.3.1
-        version: 25.3.1
+        specifier: ^25.3.2
+        version: 25.3.2
       '@types/vscode':
         specifier: ^1.109.0
         version: 1.109.0
@@ -639,11 +639,11 @@ packages:
     resolution: {integrity: sha512-zmPitbQ8+6zNutpwgcQuLcsEpn/Cj54Kbn7L5pX0Os5kdWplB7xPgEh/g+SWOB/qmows2gpuCaPyduq8ZZRnxA==}
     deprecated: This is a stub types definition. minimatch provides its own type definitions, so you do not need this installed.
 
-  '@types/node@24.10.14':
-    resolution: {integrity: sha512-OowOUbD1lBCOFIPOZ8xnMIhgqA4sCutMiYOmPHL1PTLt5+y1XA+g2+yC9OOyz8p+deMZqPZLxfMjYIfrKsPeFg==}
+  '@types/node@24.10.15':
+    resolution: {integrity: sha512-BgjLoRuSr0MTI5wA6gMw9Xy0sFudAaUuvrnjgGx9wZ522fYYLA5SYJ+1Y30vTcJEG+DRCyDHx/gzQVfofYzSdg==}
 
-  '@types/node@25.3.1':
-    resolution: {integrity: sha512-hj9YIJimBCipHVfHKRMnvmHg+wfhKc0o4mTtXh9pKBjC8TLJzz0nzGmLi5UJsYAUgSvXFHgb0V2oY10DUFtImw==}
+  '@types/node@25.3.2':
+    resolution: {integrity: sha512-RpV6r/ij22zRRdyBPcxDeKAzH43phWVKEjL2iksqo1Vz3CuBUrgmPpPhALKiRfU7OMCmeeO9vECBMsV0hMTG8Q==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -3646,7 +3646,7 @@ snapshots:
     dependencies:
       '@types/http-cache-semantics': 4.2.0
       '@types/keyv': 3.1.4
-      '@types/node': 25.3.1
+      '@types/node': 25.3.2
       '@types/responselike': 1.0.3
 
   '@types/discord-rpc@4.0.10':
@@ -3670,7 +3670,7 @@ snapshots:
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 6.0.0
-      '@types/node': 25.3.1
+      '@types/node': 25.3.2
 
   '@types/http-cache-semantics@4.2.0': {}
 
@@ -3680,7 +3680,7 @@ snapshots:
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 25.3.1
+      '@types/node': 25.3.2
 
   '@types/lodash-es@4.17.12':
     dependencies:
@@ -3692,11 +3692,11 @@ snapshots:
     dependencies:
       minimatch: 10.2.3
 
-  '@types/node@24.10.14':
+  '@types/node@24.10.15':
     dependencies:
       undici-types: 7.16.0
 
-  '@types/node@25.3.1':
+  '@types/node@25.3.2':
     dependencies:
       undici-types: 7.18.2
 
@@ -3704,7 +3704,7 @@ snapshots:
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 25.3.1
+      '@types/node': 25.3.2
 
   '@types/sarif@2.1.7': {}
 
@@ -3712,7 +3712,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 25.3.1
+      '@types/node': 25.3.2
     optional: true
 
   '@typescript-eslint/eslint-plugin@8.56.1(@typescript-eslint/parser@8.56.1(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)':
@@ -4462,7 +4462,7 @@ snapshots:
   electron@40.6.1:
     dependencies:
       '@electron/get': 2.0.3
-      '@types/node': 24.10.14
+      '@types/node': 24.10.15
       extract-zip: 2.0.1
     transitivePeerDependencies:
       - supports-color
@@ -5263,7 +5263,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 25.3.1
+      '@types/node': 25.3.2
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
