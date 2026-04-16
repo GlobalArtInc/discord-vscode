@@ -18,8 +18,8 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       electron:
-        specifier: ^41.2.0
-        version: 41.2.0
+        specifier: ^41.2.1
+        version: 41.2.1
       lodash-es:
         specifier: ^4.18.1
         version: 4.18.1
@@ -1272,8 +1272,8 @@ packages:
   electron-to-chromium@1.5.335:
     resolution: {integrity: sha512-q9n5T4BR4Xwa2cwbrwcsDJtHD/enpQ5S1xF1IAtdqf5AAgqDFmR/aakqH3ChFdqd/QXJhS3rnnXFtexU7rax6Q==}
 
-  electron@41.2.0:
-    resolution: {integrity: sha512-0OKLiymqfV0WK68RBXqAm3Myad2TpI5wwxLCBEUcH5Nugo3YfSk7p1Js/AL9266qTz5xZioUnxt9hG8FFwax0g==}
+  electron@41.2.1:
+    resolution: {integrity: sha512-teeRThiYGTPKf/2yOW7zZA1bhb91KEQ4yLBPOg7GxpmnkLFLugKgQaAKOrCgdzwsXh/5mFIfmkm+4+wACJKwaA==}
     engines: {node: '>= 12.20.55'}
     hasBin: true
 
@@ -4411,7 +4411,7 @@ snapshots:
 
   electron-to-chromium@1.5.335: {}
 
-  electron@41.2.0:
+  electron@41.2.1:
     dependencies:
       '@electron/get': 2.0.3
       '@types/node': 24.12.2
