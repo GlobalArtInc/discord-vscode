@@ -34,8 +34,8 @@ importers:
         specifier: ^3.3.5
         version: 3.3.5
       '@types/discord-rpc':
-        specifier: ^4.0.10
-        version: 4.0.10
+        specifier: ^4.0.11
+        version: 4.0.11
       '@types/lodash-es':
         specifier: ^4.17.6
         version: 4.17.12
@@ -588,8 +588,8 @@ packages:
   '@textlint/types@15.7.1':
     resolution: {integrity: sha512-Vye/GmFNBTgVzZFtIFJTmLB+s2A7oIADxNG6r9UhfPuY+Czv0z5G3xeyFZZudPlfxURsKUyPIU5XsjOFqVp33A==}
 
-  '@types/discord-rpc@4.0.10':
-    resolution: {integrity: sha512-V7uQUUjYHwQ+8LyTcPZvExOi8yv310XZgZxzsVljTXhmik4apgRuDj+oqz15n0On0qXunEuvDdhD7VZyQgXm6g==}
+  '@types/discord-rpc@4.0.11':
+    resolution: {integrity: sha512-w2WgzgtyDNHMbmIeogN4f1uy1Mz2Woe+27XcvyjPRcCI9QdWyJifHHIJopwXm8f04fHia/vkhId/eyqxmbLoHw==}
 
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
@@ -3507,7 +3507,7 @@ snapshots:
     dependencies:
       '@textlint/ast-node-types': 15.7.1
 
-  '@types/discord-rpc@4.0.10':
+  '@types/discord-rpc@4.0.11':
     dependencies:
       '@types/events': 3.0.3
 
