@@ -18,8 +18,8 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       electron:
-        specifier: ^42.4.0
-        version: 42.4.0
+        specifier: ^42.4.1
+        version: 42.4.1
       lodash-es:
         specifier: ^4.18.1
         version: 4.18.1
@@ -155,8 +155,8 @@ packages:
     resolution: {integrity: sha512-Xc3VhU02wqZ1HvHRJUwL09HkZSTvidqY5Ya0NXBSYOxAp+Ln9dcJr9fySI+CkONzP3PekQo9WdzCv0PGER/mOA==}
     engines: {node: '>=14.17.0'}
 
-  '@electron-internal/extract-zip@1.0.2':
-    resolution: {integrity: sha512-VJuNETNPEhrmQEZezeTZO5TZMV+dobBRyJ7zHjGJWIhMS7m7W1UeClt69u4hkUxv9ZZVxuli/E9Yvc4gDNHGsg==}
+  '@electron-internal/extract-zip@1.0.3':
+    resolution: {integrity: sha512-OjKpjB7gohtEjZiq6nDx1egqjZJhGPN1iFOIED+NFhB/MMkXw/XRcHjh1DGXKT5z2W9eW7Jy2UKU3gpjvusFTQ==}
     engines: {node: '>=22.12.0'}
 
   '@electron/get@5.0.0':
@@ -1254,8 +1254,8 @@ packages:
   electron-to-chromium@1.5.361:
     resolution: {integrity: sha512-Q6Hts7N9FnJc5LeGRINFvLhCI9xZmNtTDe5ZbcVezQz7cU4a8Aua3GH1b8J2XY8Al9PF+OCwYqhgsOOheMdvkA==}
 
-  electron@42.4.0:
-    resolution: {integrity: sha512-OXXqh9LD9KxXPv2Fe25EfU9N9AvWTuV6V81sfhQaNvTAXCd9ONA+Q4OWvMe+CmYD6xIwjFxGGtG/ZphDYYC5OQ==}
+  electron@42.4.1:
+    resolution: {integrity: sha512-8CYHJP5O4wFO+ycoJR98yy907MmPeo+vWXrzjxmGGgRNKqv8pOjjm+wphO0CCgQJnBU7+QUPSJS4QXhbKrO50w==}
     engines: {node: '>= 22.12.0'}
     hasBin: true
 
@@ -2888,8 +2888,8 @@ packages:
     resolution: {integrity: sha512-+t2Z/GwkZQDtu00813aP66ygViGtPHKhhoFZpQKpKrE+9jIgES+Zw+mFNaDWOVRKiuJjuqKHzD3B1sfGg8+ZOQ==}
     engines: {node: '>=20.18.1'}
 
-  undici@7.27.2:
-    resolution: {integrity: sha512-uZsKNuzQxDMUY6M3pIMvy5tvlGmtq8XJ2oLAkfRKGNu+1VQAIvLy2xIVG5ATZl5wDXl/tddByAWCizRbOme+TA==}
+  undici@7.28.0:
+    resolution: {integrity: sha512-cRZYrTDwWznlnRiPjggAGxZXanty6M8RV1ff8Wm4LWXBp7/IG8v5DnOm74DtUBp9OONpK75YlPnIjQqX0dBDtA==}
     engines: {node: '>=20.18.1'}
 
   unicorn-magic@0.1.0:
@@ -3158,7 +3158,7 @@ snapshots:
 
   '@discoveryjs/json-ext@1.1.0': {}
 
-  '@electron-internal/extract-zip@1.0.2': {}
+  '@electron-internal/extract-zip@1.0.3': {}
 
   '@electron/get@5.0.0':
     dependencies:
@@ -3169,7 +3169,7 @@ snapshots:
       semver: 7.8.4
       sumchecker: 3.0.1
     optionalDependencies:
-      undici: 7.27.2
+      undici: 7.28.0
     transitivePeerDependencies:
       - supports-color
 
@@ -4321,9 +4321,9 @@ snapshots:
 
   electron-to-chromium@1.5.361: {}
 
-  electron@42.4.0:
+  electron@42.4.1:
     dependencies:
-      '@electron-internal/extract-zip': 1.0.2
+      '@electron-internal/extract-zip': 1.0.3
       '@electron/get': 5.0.0
       '@types/node': 24.13.2
     transitivePeerDependencies:
@@ -6129,7 +6129,7 @@ snapshots:
 
   undici@7.27.0: {}
 
-  undici@7.27.2:
+  undici@7.28.0:
     optional: true
 
   unicorn-magic@0.1.0: {}
