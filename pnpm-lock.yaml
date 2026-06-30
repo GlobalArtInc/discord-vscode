@@ -18,8 +18,8 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       electron:
-        specifier: ^42.5.0
-        version: 42.5.0
+        specifier: ^42.5.1
+        version: 42.5.1
       lodash-es:
         specifier: ^4.18.1
         version: 4.18.1
@@ -1254,8 +1254,8 @@ packages:
   electron-to-chromium@1.5.361:
     resolution: {integrity: sha512-Q6Hts7N9FnJc5LeGRINFvLhCI9xZmNtTDe5ZbcVezQz7cU4a8Aua3GH1b8J2XY8Al9PF+OCwYqhgsOOheMdvkA==}
 
-  electron@42.5.0:
-    resolution: {integrity: sha512-cYEKS9XFz+c9fAB4jI0x49yz1FFzB55r3q96wu9YkwwJMv7t9202IE/ltlgy6yitl/J4M7C8JQcmUqdzDvPl/w==}
+  electron@42.5.1:
+    resolution: {integrity: sha512-2VFNJcHHbrhIpGsJHdkLoi/nWPZPxN3GHVPe+9At3Oz3/TJRwpr+7JL97ddBDbKyLmHGx3GfI2jvzcEQL28uFw==}
     engines: {node: '>= 22.12.0'}
     hasBin: true
 
@@ -2502,11 +2502,6 @@ packages:
 
   semver@7.8.1:
     resolution: {integrity: sha512-rkVq3IXh+4FDGch+KwzX3aV9W3kO54GyEgpvBzSyctDA6Xtd7RJQV1xmXbeQp5v7+VzLOfVqiutSE6GICgPFvg==}
-    engines: {node: '>=10'}
-    hasBin: true
-
-  semver@7.8.4:
-    resolution: {integrity: sha512-rUCObTnP32Q08R2uuIrt7r9PlEonuTmtuXYcW6s5kjdlj3xbnwe+21yXptAUYcMAABLkYYTtnmzb3w3EDZfueA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -4327,7 +4322,7 @@ snapshots:
 
   electron-to-chromium@1.5.361: {}
 
-  electron@42.5.0:
+  electron@42.5.1:
     dependencies:
       '@electron-internal/extract-zip': 1.0.4
       '@electron/get': 5.0.0
@@ -5713,8 +5708,6 @@ snapshots:
   semver@6.3.1: {}
 
   semver@7.8.1: {}
-
-  semver@7.8.4: {}
 
   semver@7.8.5: {}
 
